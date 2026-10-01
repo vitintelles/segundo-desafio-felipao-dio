@@ -1,0 +1,30 @@
+def calcular_saldo(vitoria, derrota):
+  saldo = vitoria - derrota
+  return saldo
+def obter_nivel (saldo):
+  if saldo <= 10:
+    elo = "Ferro"
+    return elo
+  elif saldo <= 20:
+    elo = "Bronze"
+    return elo
+  elif saldo <= 50:
+    elo = "Prata"
+    return elo
+  elif saldo <= 80:
+    elo = "Ouro"
+    return elo
+  elif saldo <= 90:
+    elo = "Diamante"
+    return elo
+  elif saldo <= 100:
+    elo = "Lendário"
+    return elo
+  else:
+    elo = "Imortal"
+    return elo
+
+
+saldo = calcular_saldo(int(input("Digite a quantidade de vitórias: ")), int(input("Digite a quantidade de derrotas: ")))
+elo = obter_nivel(saldo)
+print(f"O herói tem saldo de {saldo} vitórias e está no nível de {elo}")
